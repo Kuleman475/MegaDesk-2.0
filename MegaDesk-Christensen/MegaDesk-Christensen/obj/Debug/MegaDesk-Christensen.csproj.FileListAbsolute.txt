@@ -1,0 +1,15 @@
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\bin\Debug\MegaDesk-Christensen.exe.config
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\bin\Debug\MegaDesk-Christensen.exe
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\bin\Debug\MegaDesk-Christensen.pdb
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.csproj.AssemblyReference.cache
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.csproj.SuggestedBindingRedirects.cache
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk_Christensen.AddQuote.resources
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk_Christensen.MainMenu.resources
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk_Christensen.Properties.Resources.resources
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.csproj.GenerateResource.cache
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.csproj.CoreCompileInputs.cache
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.exe
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.pdb
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk_Christensen.DisplayQuote.resources
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk_Christensen.SearchQuotes.resources
+C:\Users\chris\CIT365-W2022-ChristensenTaylor\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk_Christensen.ViewAllQuotes.resources
