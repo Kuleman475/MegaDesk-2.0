@@ -9,7 +9,6 @@ namespace MegaDesk_Christensen
     internal class Desk
     {
 
-
         static string widthnum, dephtNum;
         static int drawersnum, deskMatNum;
        
