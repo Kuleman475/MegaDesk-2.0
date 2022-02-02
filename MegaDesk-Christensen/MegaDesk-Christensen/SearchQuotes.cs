@@ -16,5 +16,27 @@ namespace MegaDesk_Christensen
         {
             InitializeComponent();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+
+
+
+        }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+            comboBox1.DataSource = Enum.GetValues(typeof(Desk.DesktopMaterial));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu MM = new MainMenu();
+            MM.ShowDialog();
+            this.Close();
+        }
     }
 }

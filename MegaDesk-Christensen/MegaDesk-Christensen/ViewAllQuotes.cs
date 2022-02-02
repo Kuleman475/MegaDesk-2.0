@@ -16,5 +16,16 @@ namespace MegaDesk_Christensen
         {
             InitializeComponent();
         }
+
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu MM = new MainMenu();
+            MM.ShowDialog();
+            this.Close();
+        }
     }
 }
