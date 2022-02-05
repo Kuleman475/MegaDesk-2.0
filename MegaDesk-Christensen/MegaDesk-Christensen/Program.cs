@@ -22,7 +22,7 @@ namespace MegaDesk_Christensen
 
             deskQuoteList = DeskQuote.Load("desk_quote_list.json");
 
-            //MessageBox.Show($"{deskQuoteList}");
+            MessageBox.Show($"{deskQuoteList}");
 
             if (deskQuoteList == null)
             {

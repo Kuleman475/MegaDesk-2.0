@@ -16,7 +16,7 @@ namespace MegaDesk_Christensen
     {
 
 
-        static string FName, LName;
+         string FName, LName;
         static int Rushnum;
         public string FirstName
         {
@@ -278,7 +278,9 @@ namespace MegaDesk_Christensen
             this.rushNum = RushOrder;
 
         }
-        
+
+
+
         public int Width { get; set; }
         public int Depth { get; set; }
         public int Drawers { get; set; }
@@ -287,7 +289,26 @@ namespace MegaDesk_Christensen
         public int Price { get; set; }
         public int rushNum { get; set; }
 
-     
+        public DeskQuote()
+        {
+
+        }
+
+
+        public class GetDeskQuotes
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            private int RushOrder { get; set;}
+            public int Width { get; set; }
+            public int Depth { get; set; }
+            public int Drawers { get; set; }
+            public int DesktopMaterial { get; set; }
+            public string Date { get; set; }
+            public int Price { get; set; }
+          
+
+        }
 
 
    

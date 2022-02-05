@@ -79,8 +79,8 @@ namespace MegaDesk_Christensen
        myDeskMaterial.CurrentDesktopMaterial = (Desk.DesktopMaterial)comboBox1.SelectedIndex;
 
        DeskQuote myDesk = new DeskQuote(FirstName.Text, LastName.Text, WidthVal, DepthVal, Drawers, comboBox1.SelectedIndex, todaysDate, rushNum);
-       myDesk.CurrentRushCombo = (DeskQuote.RushCombo)RushCombo.SelectedIndex;
-              //  myDesk.rushNum = DeskQuote.rushNumdays;
+      // myDesk.CurrentRushCombo = (DeskQuote.RushCombo)RushCombo.SelectedIndex;
+           //    myDesk.rushNum = DeskQuote.rushNumdays;
                       myDesk.FirstName = FirstName.Text;
                       myDesk.LastName = LastName.Text;
                       myDesk.Width = WidthVal;
@@ -89,10 +89,7 @@ namespace MegaDesk_Christensen
                     myDesk.DesktopMaterial = comboBox1.SelectedIndex;
                 //    myDesk.Price = DeskQuote.Total(Convert.ToInt32(DeskQuote.RushnumTotal(DeskQuote.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail);
 
-                if (myDesk == null)
-                {
-                    MessageBox.Show("PPPPPPPPPPPPPPP");
-                }
+                MessageBox.Show($"{Program.deskQuoteList}");
 
 
 

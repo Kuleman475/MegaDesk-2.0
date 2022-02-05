@@ -69,16 +69,16 @@ namespace MegaDesk_Christensen
         {
        //     myDesk.FirstName = DeskQuote.FirstName;
 
-            MessageBox.Show(Program.deskQuoteList.Count().ToString());
-          // int adddias = Convert.ToInt32(myDesk.rushNum);
-            nameLabel.Text = myDesk.FirstName;
+            
+          int adddias = Convert.ToInt32(myDesk.rushNum);
+            nameLabel.Text = myDesk.FirstName + " " + myDesk.LastName;
             WidthLabel.Text = myDesk.Width + " Inches";
             DepthLabel.Text = myDesk.Depth + " Inches";
             DrawersLabel.Text = myDesk.Drawers.ToString();
             MaterialsLabel.Text = myDesk.DesktopMaterial.ToString(); //DeskQuote.deskmatsNames(Desk.DesktopMaterail);
             OrderLabel.Text = myDesk.RushOrder.ToString(); //DeskQuote.RushorderDays(DeskQuote.RushOrder);
             TotalLabel.Text = "$ " + myDesk.Total(Convert.ToInt32(DeskQuote.RushnumTotal(myDesk.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail).ToString();
-          // DateLabel.Text = DateTime.Today.AddDays(adddias).ToString("dd MMMM yyy");
+             DateLabel.Text = DateTime.Today.AddDays(adddias).ToString("dd MMMM yyy");
             TodaysDAte.Text = DateTime.Today.ToString("dd MMMM yyyy");
 
             

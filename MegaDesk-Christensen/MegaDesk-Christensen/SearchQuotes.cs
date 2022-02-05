@@ -15,9 +15,19 @@ namespace MegaDesk_Christensen
         public SearchQuotes()
         {
             InitializeComponent();
-        }
+        
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+             this.Load += new EventHandler(DataGridView_Load);
+    }
+
+    private void DataGridView_Load(System.Object sender, System.EventArgs e)
+    {
+        DataGridView.DataSource = Program.deskQuoteList;
+
+    }
+    private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
 
@@ -41,7 +51,7 @@ namespace MegaDesk_Christensen
 
         private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("P");
+            
         }
 
      
