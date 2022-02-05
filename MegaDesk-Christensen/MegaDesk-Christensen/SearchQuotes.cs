@@ -38,5 +38,12 @@ namespace MegaDesk_Christensen
             MM.ShowDialog();
             this.Close();
         }
+
+        private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("P");
+        }
+
+     
     }
 }

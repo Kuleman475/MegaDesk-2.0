@@ -74,6 +74,8 @@ namespace MegaDesk_Christensen
             TotalLabel.Text = "$ " + DeskQuote.Total(Convert.ToInt32(DeskQuote.RushnumTotal(DeskQuote.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail).ToString();
             DateLabel.Text = DateTime.Today.AddDays(adddias).ToString("dd MMMM yyy");
             TodaysDAte.Text = DateTime.Today.ToString("dd MMMM yyyy");
+
+            
         }
 
         private void TodaysDAte_Click(object sender, EventArgs e)

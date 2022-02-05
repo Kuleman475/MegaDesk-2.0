@@ -123,7 +123,94 @@ namespace MegaDesk_Christensen
             set { _desktopMaterial = value; }
         }
 
+
+
+
+        /*
+        public Account(string inName, string inAddress,
+ decimal inBalance)
+        {
+            name = inName;
+            address = inAddress;
+            balance = inBalance;
+        }
     }
-    
+
+    const int MAX_CUST = 100;
+        deskquoteArray[] deskArray = new deskquoteArray[MAX_CUST];//(DeskQuote.FirstName, DeskQuote.LastName, Desk.Width, Desk.Depth, Desk.Drawers.ToString(), Desk.DesktopMaterail.ToString());
+
+        deskArray[0] = new deskquoteArray(DeskQuote.FirstName, DeskQuote.LastName, Desk.Width, Desk.Depth, Desk.Drawers.ToString(), Desk.DesktopMaterail.ToString());
+        /*
+         * const int MAX_CUST = 100;
+                        Account[] Accounts = new Account[MAX_CUST];
+                        Accounts[0] = new Account("Rob", "Robs House",
+                        1000000);
+                        Accounts[1] = new Account("Jim", "Jims House");
+                        Accounts[2] = new Account("Fred");
+
+
+
+
+
+        const int MAX_CUST = 100;
+ Account[] Bank = new Account[MAX_CUST];
+ Bank[0].Name = "Rob";
+ Bank[0].State = AccountState.Active;
+ Bank[0].Balance = 1000000;
+ Bank[1].Name = "Jim";
+ Bank[1].State = AccountState.Frozen;
+ Bank[1].Balance = 0;
+
+        */
+
+        /*
+                const int MAX_CUST = 100;
+                Desk[] Bank = new Desk[MAX_CUST];
+                Bank[0].Firstname = DeskQuote.FirstName;
+         Bank[0].State = AccountState.Active;
+         Bank[0].Balance = 1000000;
+         Bank[1].Name = "Jim";
+         Bank[1].State = AccountState.Frozen;
+         Bank[1].Balance = 0;
+        */
+        /*
+        struct Account
+        {
+           // public AccountState State;
+            public string Name;
+            public string Address;
+            public int AccountNumber;
+            public int Balance;
+            public int Overdraft;
+        }
+
+        const int MAX_CUST = 100;
+
+        AccountState[] states = new AccountState[MAX_CUST];
+        string[] Name = new string[MAX_CUST];
+        
+
+        int[] Width = new int[MAX_CUST];
+        int[] Depth = new int[MAX_CUST];
+        int[] Drawers = new int[MAX_CUST];
+
+
+
+        Desk.Account RobsAccount;
+
+        Desk[] Desks = new Desk[MAX_CUST];
+        Desk[0] Width = Desk.Width.ToString();
+                Desk[0].Depth = Desk.Depth;
+                Desk[0].Drawers = Convert.ToInt32(DrawerDrop.Value);
+                Desks[0].CurrentDesktopMaterial = (Desk.DesktopMaterial) comboBox1.SelectedItem;
+
+        DeskQuote[] deskQuotes = new DeskQuote[MAX_CUST];
+        deskQuotes[0].Name = DeskQuote.FirstName + DeskQuote.LastName;
+               */
+            
+
+
+    }
+
 
 }

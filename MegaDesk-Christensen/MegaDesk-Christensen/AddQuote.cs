@@ -23,6 +23,8 @@ namespace MegaDesk_Christensen
         private void Submit_Click(object sender, EventArgs e)
         {
 
+
+
             string WidthString = Width.Text;
             string DepthString = Depth.Text;
             int selectedIndex = comboBox1.SelectedIndex + 1;
@@ -87,6 +89,12 @@ namespace MegaDesk_Christensen
                 Desk.DesktopMaterail = Convert.ToInt32((Desk.DesktopMaterial)comboBox1.SelectedIndex);
         
                 DeskQuote.RushOrder = Convert.ToInt32((DeskQuote.RushCombo)RushCombo.SelectedIndex);
+
+
+             
+
+
+
 
                 this.Hide();
                 DisplayQuote DQ = new DisplayQuote();

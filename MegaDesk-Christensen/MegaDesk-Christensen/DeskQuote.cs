@@ -76,7 +76,7 @@ namespace MegaDesk_Christensen
             {
                 return "7 Day Shipping";
             }
-                   
+
             return "14 Day Shipping";
         }
         public static string deskmatsNames(int DesktopMaterail)
@@ -166,7 +166,7 @@ namespace MegaDesk_Christensen
                 {
                     return rushNum = 80;
                 }
-                
+
             }
             else if (rushNum == 1)
             {
@@ -178,7 +178,7 @@ namespace MegaDesk_Christensen
                 {
                     return rushNum = 50;
                 }
-                else 
+                else
                 {
                     return rushNum = 60;
                 }
@@ -194,7 +194,7 @@ namespace MegaDesk_Christensen
                 {
                     return rushNum = 35;
                 }
-                else 
+                else
                 {
                     return rushNum = 40;
                 }
@@ -202,27 +202,24 @@ namespace MegaDesk_Christensen
             }
             return 0;
         }
-    
-    public static int Total(int rushNumber, int Width, int Depth, int Drawers, int DesktopMaterail)
-    {
-             int deskWidth = Convert.ToInt32(Desk.Width);
-             int deskDepth = Convert.ToInt32(Desk.Depth);
-             int deskDrawers = Convert.ToInt32(Desk.Drawers);
-          //   int deskMats = Convert.ToInt32(Desk.DesktopMaterail);   
 
-         //   int rushNumber = RushnumTotal(rushNum, Width, Depth);
+        public static int Total(int rushNumber, int Width, int Depth, int Drawers, int DesktopMaterail)
+        {
+            int deskWidth = Convert.ToInt32(Desk.Width);
+            int deskDepth = Convert.ToInt32(Desk.Depth);
+            int deskDrawers = Convert.ToInt32(Desk.Drawers);
+            //   int deskMats = Convert.ToInt32(Desk.DesktopMaterail);   
+
+            //   int rushNumber = RushnumTotal(rushNum, Width, Depth);
             int deskmattts = deskmatsTotal(DesktopMaterail);
 
 
-        int total = 200 + (deskWidth * deskDepth) + (deskDrawers * 50) + deskmattts + rushNumber;
+            int total = 200 + (deskWidth * deskDepth) + (deskDrawers * 50) + deskmattts + rushNumber;
             return total;
 
+        }
 
-
-    }
-
-
-
+       
 
 
 
