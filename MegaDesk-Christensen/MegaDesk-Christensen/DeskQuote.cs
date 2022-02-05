@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Windows.Forms;
+using System.IO;
+
+
+
 
 namespace MegaDesk_Christensen
 {
-    internal class DeskQuote
+    public class DeskQuote
     {
+
+
         static string FName, LName;
         static int Rushnum;
-        public static string FirstName
+        public string FirstName
         {
             get
             {
@@ -21,7 +29,7 @@ namespace MegaDesk_Christensen
                 FName = value;
             }
         }
-        public static string LastName
+        public string LastName
         {
             get
             {
@@ -33,7 +41,7 @@ namespace MegaDesk_Christensen
                 LName = value;
             }
         }
-        public static int RushOrder
+        public int RushOrder
         {
             get
             {
@@ -203,7 +211,7 @@ namespace MegaDesk_Christensen
             return 0;
         }
 
-        public static int Total(int rushNumber, int Width, int Depth, int Drawers, int DesktopMaterail)
+        public int Total(int rushNumber, int Width, int Depth, int Drawers, int DesktopMaterail)
         {
             int deskWidth = Convert.ToInt32(Desk.Width);
             int deskDepth = Convert.ToInt32(Desk.Depth);
@@ -219,9 +227,71 @@ namespace MegaDesk_Christensen
 
         }
 
-       
+        public static List<DeskQuote> Load(string filename)
+        {
+            List<DeskQuote> quoteList = null;
+            quoteList = new List<DeskQuote>();
+
+            if (File.Exists(filename))
+            {
+
+                StreamReader textIn = new StreamReader(filename);
+                try
+                {
+                    string JSONList = textIn.ReadToEnd();
+
+                    MessageBox.Show("Inside public static List<DeskQuote> Load");
+                    MessageBox.Show($"{JSONList}");
+
+                    quoteList = JsonConvert.DeserializeObject<List<DeskQuote>>(JSONList);
 
 
+                    MessageBox.Show($"{quoteList}");
 
-    }
+                }
+                catch
+                {
+                    return null;
+                }
+                finally
+                {
+                    if (textIn != null) textIn.Close();
+                }
+                return quoteList;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public DeskQuote(string FirstName, string LastName, int Width, int Depth, int Drawers, int DesktopMaterial, string Date, int rushNum)
+        {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Width = Width;
+            this.Depth = Depth;
+            this.Drawers = Drawers;
+            this.DesktopMaterial = DesktopMaterial;
+            this.Date = Date;
+            this.Price = this.Total(Convert.ToInt32(DeskQuote.RushnumTotal(this.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail);
+            this.rushNum = RushOrder;
+
+        }
+        
+        public int Width { get; set; }
+        public int Depth { get; set; }
+        public int Drawers { get; set; }
+        public int DesktopMaterial { get; set; }
+        public string Date { get; set; }
+        public int Price { get; set; }
+        public int rushNum { get; set; }
+
+     
+
+
+   
+
+
+}
 }

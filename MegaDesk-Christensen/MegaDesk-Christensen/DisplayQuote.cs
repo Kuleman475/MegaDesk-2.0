@@ -13,8 +13,10 @@ namespace MegaDesk_Christensen
 {
     public partial class DisplayQuote : Form
     {
-//        private DeskQuote _displayQuote;
-        public DisplayQuote()
+        //        private DeskQuote _displayQuote;
+        public readonly DeskQuote myDesk;
+        
+        public DisplayQuote(DeskQuote myDesk)
         {  
 
           
@@ -64,15 +66,15 @@ namespace MegaDesk_Christensen
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            int adddias = Convert.ToInt32(DeskQuote.rushNumdays(DeskQuote.RushOrder));
-            nameLabel.Text = DeskQuote.FirstName + " " + DeskQuote.LastName;
-            WidthLabel.Text = Desk.Width + " Inches";
-            DepthLabel.Text = Desk.Depth + " Inches";
-            DrawersLabel.Text = Desk.Drawers.ToString();
-            MaterialsLabel.Text = DeskQuote.deskmatsNames(Desk.DesktopMaterail);
-            OrderLabel.Text = DeskQuote.RushorderDays(DeskQuote.RushOrder);
-            TotalLabel.Text = "$ " + DeskQuote.Total(Convert.ToInt32(DeskQuote.RushnumTotal(DeskQuote.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail).ToString();
-            DateLabel.Text = DateTime.Today.AddDays(adddias).ToString("dd MMMM yyy");
+           int adddias = Convert.ToInt32(myDesk.rushNum);
+            nameLabel.Text = myDesk.FirstName;
+            WidthLabel.Text = myDesk.Width + " Inches";
+            DepthLabel.Text = myDesk.Depth + " Inches";
+            DrawersLabel.Text = myDesk.Drawers.ToString();
+            MaterialsLabel.Text = myDesk.DesktopMaterial.ToString(); //DeskQuote.deskmatsNames(Desk.DesktopMaterail);
+            OrderLabel.Text = myDesk.RushOrder.ToString(); //DeskQuote.RushorderDays(DeskQuote.RushOrder);
+            TotalLabel.Text = "$ " + myDesk.Total(Convert.ToInt32(DeskQuote.RushnumTotal(myDesk.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail).ToString();
+           DateLabel.Text = DateTime.Today.AddDays(adddias).ToString("dd MMMM yyy");
             TodaysDAte.Text = DateTime.Today.ToString("dd MMMM yyyy");
 
             

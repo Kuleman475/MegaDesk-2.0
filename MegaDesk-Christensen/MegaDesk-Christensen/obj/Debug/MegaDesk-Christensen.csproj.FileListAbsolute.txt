@@ -43,3 +43,6 @@ C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDes
 C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.csproj.CoreCompileInputs.cache
 C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.exe
 C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.pdb
+C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDesk-Christensen\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDesk-Christensen\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chris\Source\Repos\Kuleman475\MegaDesk-2.0\MegaDesk-Christensen\MegaDesk-Christensen\obj\Debug\MegaDesk-Christensen.csproj.CopyComplete

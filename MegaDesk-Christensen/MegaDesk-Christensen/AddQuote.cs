@@ -19,7 +19,7 @@ namespace MegaDesk_Christensen
         { 
             InitializeComponent();
         }
-            private DeskQuote _displayQuote = new DeskQuote();
+         //   private DeskQuote _displayQuote = new DeskQuote();
         private void Submit_Click(object sender, EventArgs e)
         {
 
@@ -35,10 +35,11 @@ namespace MegaDesk_Christensen
 
             int deskMats = Desk.getdeskMat(selectedIndex);
             int RushOrder = Desk.getdeskMat(selectedRush);
-
-              int DepthVal = Convert.ToInt32(Depth.Text);
+            int Drawers = Convert.ToInt32(DrawerDrop.Value);
+            int DepthVal = Convert.ToInt32(Depth.Text);
             int WidthVal = Convert.ToInt32(Width.Text);
             int result = Desk.GetArea(DepthVal, WidthVal);
+           
 
             if (String.IsNullOrEmpty(FirstName.Text)) 
             {
@@ -69,35 +70,45 @@ namespace MegaDesk_Christensen
             else
             {
 
+               // DateLabel.Text = DateTime.Today.AddDays(adddias).ToString("dd MMMM yyy");
+                string todaysDate = DateTime.Today.ToString("dd MMMM yyyy");
 
+               int rushNum = RushCombo.SelectedIndex;
 
                 Desk myDeskMaterial = new Desk();
        myDeskMaterial.CurrentDesktopMaterial = (Desk.DesktopMaterial)comboBox1.SelectedIndex;
 
-       DeskQuote myDesk = new DeskQuote();
+       DeskQuote myDesk = new DeskQuote(FirstName.Text, LastName.Text, WidthVal, DepthVal, Drawers, comboBox1.SelectedIndex, todaysDate, rushNum);
        myDesk.CurrentRushCombo = (DeskQuote.RushCombo)RushCombo.SelectedIndex;
+              //  myDesk.rushNum = DeskQuote.rushNumdays;
+                //      myDesk.FirstName = FirstName.Text;
+                //      myDesk.LastName = LastName.Text;
+                //      myDesk.Width = WidthVal;
+                //      myDesk.Depth = DepthVal;
+                //     myDesk.Drawers = Convert.ToInt32(DrawerDrop.Value);
+                //    myDesk.DesktopMaterial = comboBox1.SelectedIndex;
+                //    myDesk.Price = DeskQuote.Total(Convert.ToInt32(DeskQuote.RushnumTotal(DeskQuote.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail);
 
-     
 
 
-                DeskQuote.FirstName = FirstName.Text;
-                DeskQuote.LastName = LastName.Text;
+
 
                 Desk.Width = Width.Text;
                 Desk.Depth = Depth.Text;
                 Desk.Drawers = Convert.ToInt32(DrawerDrop.Value);
                 Desk.DesktopMaterail = Convert.ToInt32((Desk.DesktopMaterial)comboBox1.SelectedIndex);
         
-                DeskQuote.RushOrder = Convert.ToInt32((DeskQuote.RushCombo)RushCombo.SelectedIndex);
+              //  DeskQuote.RushOrder = Convert.ToInt32((DeskQuote.RushCombo)RushCombo.SelectedIndex);
 
+
+
+                Program.deskQuoteList.Add(myDesk);
 
              
 
 
-
-
                 this.Hide();
-                DisplayQuote DQ = new DisplayQuote();
+                DisplayQuote DQ = new DisplayQuote(myDesk);
                 DQ.ShowDialog();
                this.Close();
 

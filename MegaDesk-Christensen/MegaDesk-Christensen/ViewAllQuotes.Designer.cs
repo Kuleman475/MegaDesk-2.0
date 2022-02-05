@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deskQuoteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.currentRushComboDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deskQuoteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -46,12 +50,26 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.currentRushComboDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.deskQuoteBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(31, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(737, 281);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            // 
+            // deskQuoteBindingSource
+            // 
+            this.deskQuoteBindingSource.DataSource = typeof(MegaDesk_Christensen.DeskQuote);
+            // 
+            // currentRushComboDataGridViewTextBoxColumn
+            // 
+            this.currentRushComboDataGridViewTextBoxColumn.DataPropertyName = "CurrentRushCombo";
+            this.currentRushComboDataGridViewTextBoxColumn.HeaderText = "CurrentRushCombo";
+            this.currentRushComboDataGridViewTextBoxColumn.Name = "currentRushComboDataGridViewTextBoxColumn";
             // 
             // ViewAllQuotes
             // 
@@ -63,6 +81,7 @@
             this.Name = "ViewAllQuotes";
             this.Text = "View All Quotes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deskQuoteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -71,5 +90,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currentRushComboDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource deskQuoteBindingSource;
     }
 }
