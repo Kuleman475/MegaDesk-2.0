@@ -81,15 +81,18 @@ namespace MegaDesk_Christensen
        DeskQuote myDesk = new DeskQuote(FirstName.Text, LastName.Text, WidthVal, DepthVal, Drawers, comboBox1.SelectedIndex, todaysDate, rushNum);
        myDesk.CurrentRushCombo = (DeskQuote.RushCombo)RushCombo.SelectedIndex;
               //  myDesk.rushNum = DeskQuote.rushNumdays;
-                //      myDesk.FirstName = FirstName.Text;
-                //      myDesk.LastName = LastName.Text;
-                //      myDesk.Width = WidthVal;
-                //      myDesk.Depth = DepthVal;
-                //     myDesk.Drawers = Convert.ToInt32(DrawerDrop.Value);
-                //    myDesk.DesktopMaterial = comboBox1.SelectedIndex;
+                      myDesk.FirstName = FirstName.Text;
+                      myDesk.LastName = LastName.Text;
+                      myDesk.Width = WidthVal;
+                      myDesk.Depth = DepthVal;
+                     myDesk.Drawers = Convert.ToInt32(DrawerDrop.Value);
+                    myDesk.DesktopMaterial = comboBox1.SelectedIndex;
                 //    myDesk.Price = DeskQuote.Total(Convert.ToInt32(DeskQuote.RushnumTotal(DeskQuote.RushOrder, Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth))), Convert.ToInt32(Desk.Width), Convert.ToInt32(Desk.Depth), Desk.Drawers, Desk.DesktopMaterail);
 
-
+                if (myDesk == null)
+                {
+                    MessageBox.Show("PPPPPPPPPPPPPPP");
+                }
 
 
 
@@ -109,6 +112,7 @@ namespace MegaDesk_Christensen
 
                 this.Hide();
                 DisplayQuote DQ = new DisplayQuote(myDesk);
+                
                 DQ.ShowDialog();
                this.Close();
 
