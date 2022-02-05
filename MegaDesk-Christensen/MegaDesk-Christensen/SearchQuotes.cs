@@ -16,11 +16,9 @@ namespace MegaDesk_Christensen
         {
             InitializeComponent();
         
-
-
-
              this.Load += new EventHandler(DataGridView_Load);
     }
+        List<DeskQuote> ListDeskQuotes;
 
     private void DataGridView_Load(System.Object sender, System.EventArgs e)
     {
@@ -29,9 +27,6 @@ namespace MegaDesk_Christensen
     }
     private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
-
 
 
         }
@@ -54,6 +49,43 @@ namespace MegaDesk_Christensen
             
         }
 
-     
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ListDeskQuotes = new List<DeskQuote>();
+            foreach (DeskQuote deskQuote in Program.deskQuoteList)
+            {
+                if (deskQuote.DesktopMaterial == comboBox1.SelectedIndex)
+                {
+                    ListDeskQuotes.Add(deskQuote);
+                }
+
+            }
+            DataGridView.DataSource = ListDeskQuotes;
+        }
+
+        private void bindingSource2_CurrentItemChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+              
+                
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+
+            }
+            else if (comboBox1.SelectedIndex == 4)
+            {
+
+            }
+        }
     }
 }
