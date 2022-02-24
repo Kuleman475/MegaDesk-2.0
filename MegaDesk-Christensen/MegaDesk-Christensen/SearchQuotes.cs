@@ -52,6 +52,7 @@ namespace MegaDesk_Christensen
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             ListDeskQuotes = new List<DeskQuote>();
+
             foreach (DeskQuote deskQuote in Program.deskQuoteList)
             {
                 if (deskQuote.DesktopMaterial == comboBox1.SelectedIndex)
